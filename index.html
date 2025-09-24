@@ -62,12 +62,17 @@
       const tg = window.Telegram?.WebApp;
       if (tg) { tg.expand(); tg.ready(); }
 
-      const apiBaseInput = document.getElementById('apiBase');
-      const saveApiBaseBtn = document.getElementById('saveApiBase');
-      const tgUserEl = document.getElementById('tgUser');
+    // const apiBaseInput = document.getElementById('apiBase');
+  // const saveApiBaseBtn = document.getElementById('saveApiBase');
 
-      let API_BASE = localStorage.getItem('API_BASE') || apiBaseInput.value;
+      const apiBaseInput = document.getElementById('apiBase');
+// Hard-wire your backend. This is the only source of truth.
+      const API_BASE = "https://miniapp-backend-kpto.onrender.com";
+// Keep the input visible just so you see what it is; disable editing.
       apiBaseInput.value = API_BASE;
+      apiBaseInput.readOnly = true;
+      
+      const tgUserEl = document.getElementById('tgUser');
 
       const initPayload = () => ({
         initData: tg?.initData || '',
