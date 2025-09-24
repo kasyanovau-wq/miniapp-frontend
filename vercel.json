@@ -4,12 +4,12 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://*.telegram.org https://telegram.org https://web.telegram.org https://tdesktop.com 'self'"
-        },
-        {
           "key": "X-Frame-Options",
           "value": "ALLOWALL"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https://*.telegram.org https://telegram.org https://web.telegram.org https://tdesktop.com 'self'"
         }
       ]
     }
